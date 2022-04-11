@@ -1,8 +1,0 @@
-git init
-
-git status # to see the status of the git files
-
-git add . or file name.extension
-
-git restore <file>..." to discard changes in working directory
-
