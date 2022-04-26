@@ -32,3 +32,16 @@ const speak_ = function(name="Rosul",time="night"){
 speak_();
 speak_("Tareq","afernoon");
 speak_("Tareq");
+
+/* Returning Values */
+
+const calcArea = function(radius){
+/*     let area = Math.PI * radius**2;
+    return area; */
+    return Math.PI * radius**2;
+};
+
+console.log(calcArea(3));
+
+const area = calcArea(4);
+console.log(area);
