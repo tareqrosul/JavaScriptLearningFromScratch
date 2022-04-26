@@ -68,3 +68,44 @@ console.log(return_(5));
 
 const salam = () => 'Salam';
 console.log(salam());
+
+
+
+// callbacks and foreach
+
+const myFunc =(callbackFunc)=>{
+    let value = 50;
+    callbackFunc(value);
+};
+
+// myFunc(function(value){
+//     console.log(value);
+// });
+
+myFunc(value=>{
+    console.log(value);
+});
+
+let people =['mario','Luigi','ryu','chaun','chun-li'];
+
+people.forEach(
+    function(person,w){
+        console.log(person,w);
+    }
+)
+const logPerson = (person,w,t)=>{
+    console.log(`${w} hello ${person}`);
+}
+people.forEach(logPerson)
+
+
+//callbacks in action
+let html=``;
+const ul = document.querySelector('.people')
+let manush =['mario','Luigi','ryu','chaun','chun-li'];
+manush.forEach((lok)=>{
+    html+= `<li style="color: purple;">${lok}</li>`
+}
+);
+console.log(html);
+ul.innerHTML=html;
