@@ -25,3 +25,10 @@ speak();
 
 /* Arguments and Parameters */
 
+const speak_ = function(name="Rosul",time="night"){
+    // console.log("Good Day %s",name);
+    console.log(`Good ${time} ${name}`);
+}
+speak_();
+speak_("Tareq","afernoon");
+speak_("Tareq");
