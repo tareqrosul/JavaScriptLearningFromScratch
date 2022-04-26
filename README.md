@@ -1,26 +1,4 @@
-# This is Just the initial Commit where I finally learned the basics of git
-> this is for templating branch which I will just for using the same template for each lesson where I will also provide markdown cheat sheet
->>that's it
->   
+# Wednesday, April 27, 2022 (GMT+6) 12:45 AM
 
-I just love **bold text**.
-I just love __bold text__.
-*I love italic Text*
-__*I also love Italic text which are bold*__
-This text is ***really important***.
-
-> ### I am going to use here blockQuotes with other elemnts like 
-> - listing 
-> - **bold**
-> - *Italic*
->  - **_Italic bold_**
-
-### Now we are going to try for making a list
-1. Apple
-2. Mango
-3. Guava
-
-### Now it's time for Unordered List
-- Apple
-- Mango
-- Guava
+## Object Literals
+> in this modern JavaScript tutorial we'll take a deep dive into JavaScript objects. We'll look at object literal notation, how to make your own objects & some built in objects to the JavaScript language like the Math object.
