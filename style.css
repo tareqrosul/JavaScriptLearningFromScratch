@@ -1,0 +1,16 @@
+.error{
+    padding: 10px;
+    color:crimson;
+    border : 1px dotted crimson;
+}
+
+.success{
+    padding: 10px;
+    color:limegreen;
+    border : 1px dotted limegreen;
+}
+.nothing{
+    padding: 10px;
+    color:blue;
+    border : 1px dotted blue;
+}
