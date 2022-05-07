@@ -24,3 +24,13 @@ This text is ***really important***.
 - Apple
 - Mango
 - Guava
+
+<a href="https://www.markdownguide.org/extended-syntax/#heading-ids">A good place to learn MarkDOwn</a>
+
+```js
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25;
+  console.log('Hello Vai');
+}
