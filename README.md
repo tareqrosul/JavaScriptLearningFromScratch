@@ -1,36 +1,73 @@
-# This is Just the initial Commit where I finally learned the basics of git
-> this is for templating branch which I will just for using the same template for each lesson where I will also provide markdown cheat sheet
->>that's it
->   
+## In this chapter I learned making a to do list 
+>This todo app contains the features of 
+>adding todo tasks
+>delete them 
+>and search them
 
-I just love **bold text**.
-I just love __bold text__.
-*I love italic Text*
-__*I also love Italic text which are bold*__
-This text is ***really important***.
+### Adding new tasks
+```js
+  const addForm = document.querySelector('.add');
 
-> ### I am going to use here blockQuotes with other elemnts like 
-> - listing 
-> - **bold**
-> - *Italic*
->  - **_Italic bold_**
+  const ehaUl = document.querySelector('.todos');
 
-### Now we are going to try for making a list
-1. Apple
-2. Mango
-3. Guava
-
-### Now it's time for Unordered List
-- Apple
-- Mango
-- Guava
-
-<a href="https://www.markdownguide.org/extended-syntax/#heading-ids">A good place to learn MarkDOwn</a>
+  const search = document.querySelector('.search input');
+```
 
 ```js
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25;
-  console.log('Hello Vai');
+
+addForm.addEventListener('submit',e=>{
+    e.preventDefault();
+    const toDO = addForm.add.value.trim();
+    if (toDO.length) {
+        generateTemplate(toDO);
+        addForm.reset();
+    }
+});
+
+const generateTemplate = toDO=>{
+    // console.log(toDO);
+    const template=`
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+    <span>${toDO}</span>
+    <i class="far fa-trash-alt delete"></i>
+    </li>
+    `;
+    ehaUl.innerHTML+=template;
 }
+
+```
+### delete todos
+``` js
+// delete todos
+ehaUl.addEventListener('click',e=>{
+    if (e.target.classList.contains('delete')) {
+        e.target.parentElement.remove();
+    }
+});
+
+```
+
+### Searching todos
+```js
+// keyup event 
+search.addEventListener('keyup',(e)=>{
+    const term = search.value.trim().toLowerCase();
+    fileterTodos(term);
+    //console.log(term);
+})
+```
+
+### This one is complicated
+
+```js
+const fileterTodos= term =>{
+    Array.from(ehaUl.children)
+    .filter(todo=>!todo.textContent.includes(term))
+    .forEach(todo=>todo.classList.add('filtered'));
+
+    Array.from(ehaUl.children)
+    .filter(todo=>todo.textContent.includes(term))
+    .forEach(todo=>todo.classList.remove('filtered'));
+};
+
+```
